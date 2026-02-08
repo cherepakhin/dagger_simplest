@@ -47,7 +47,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>com.sample.app.App</mainClass>
+							<mainClass>demo.Main</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>

@@ -7,6 +7,22 @@
 Hello World
 ````
 
+### Package executable jar
+
+[package.sh](package.sh)
+
+````shell
+mvn clean package
+````
+
+### Run Jar
+
+Java 11
+
+````shell
+java -jar target/dagger-simplest-1-jar-with-dependencies.jar
+````
+
 ### Links:
 
 [https://v.perm.ru/index.php/component/content/article/dagger?catid=15](https://v.perm.ru/index.php/component/content/article/dagger?catid=15)<br/>
