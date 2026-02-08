@@ -23,6 +23,8 @@ Java 11
 java -jar target/dagger-simplest-1-jar-with-dependencies.jar
 ````
 
+[./run_jar.sh](./run_jar.sh)
+
 ### Links:
 
 [https://v.perm.ru/index.php/component/content/article/dagger?catid=15](https://v.perm.ru/index.php/component/content/article/dagger?catid=15)<br/>
