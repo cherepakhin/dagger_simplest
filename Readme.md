@@ -1,5 +1,12 @@
 ### Hello World project for Dagger (Dependeny Injection library).
 
+[[run_mvn_exec.sh](run_mvn_exec.sh)
+````shell
+mvn exec:java
+````
+
+[run_jar.sh](./run_jar.sh)
+
 ````shell
 ./run.sh
 
