@@ -13,12 +13,6 @@ import java.net.URI;
 
 public class Main {
 
-    // What do we need?
-    @Component(modules = HelloWorldModule.class)
-    interface HelloWorldComponent {
-        HelloWorld helloWorld();
-    }
-
     public static void main(String[] args) throws Exception {
         System.out.println("=========================================");
         // If compilation fails, see README.md
@@ -56,5 +50,11 @@ public class Main {
         } finally {
             server.shutdownNow();
         }
+    }
+
+    // What do we need?
+    @Component(modules = HelloWorldModule.class)
+    interface HelloWorldComponent {
+        HelloWorld helloWorld();
     }
 }

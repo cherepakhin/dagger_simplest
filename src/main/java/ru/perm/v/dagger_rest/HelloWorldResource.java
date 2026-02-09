@@ -4,11 +4,10 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/echo")
+@Path("/hello")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class EchoResource {
-
+public class HelloWorldResource {
     @GET
     @Path("/{message}")
     public Response getMessage(@PathParam("message") String message) {
