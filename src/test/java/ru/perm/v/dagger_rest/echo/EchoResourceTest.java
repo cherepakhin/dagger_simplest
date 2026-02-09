@@ -2,6 +2,7 @@ package ru.perm.v.dagger_rest.echo;
 
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
+import ru.perm.v.dagger_rest.resources.EchoResource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
