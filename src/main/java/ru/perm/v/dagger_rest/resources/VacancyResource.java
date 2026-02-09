@@ -9,6 +9,7 @@ import ru.perm.v.dagger_rest.mappers.VacancyMapper;
 import ru.perm.v.dagger_rest.services.VacancyService;
 
 import javax.inject.Inject;
+import java.util.List;
 
 @Path("/vacancy")
 @Produces(MediaType.APPLICATION_JSON)
@@ -16,10 +17,12 @@ import javax.inject.Inject;
 public class VacancyResource {
     VacancyService vacancyService;
     VacancyMapper vacancyMapper = new VacancyMapper();
+
     @Inject
     public VacancyResource(VacancyService vacancyService) {
         this.vacancyService = vacancyService;
     }
+
     @GET
     @Path("/{id}")
     public Response getById(@PathParam("id") Long id) {
@@ -28,5 +31,16 @@ public class VacancyResource {
         }
         VacancyEntity vacancy = vacancyService.getVacancyById(id);
         return Response.ok(vacancyMapper.toDTO(vacancy)).build();
+    }
+
+    @GET
+    @Path("/all")
+    public Response getAll() {
+        List<VacancyEntity> entities = vacancyService.getAll();
+        if (entities.isEmpty()) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        } else {
+            return Response.ok(vacancyMapper.toDTOs(entities)).build();
+        }
     }
 }
