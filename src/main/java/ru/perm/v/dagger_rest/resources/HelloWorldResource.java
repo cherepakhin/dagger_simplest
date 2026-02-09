@@ -1,4 +1,4 @@
-package ru.perm.v.dagger_rest.hello;
+package ru.perm.v.dagger_rest.resources;
 
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
