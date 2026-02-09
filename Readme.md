@@ -1,6 +1,14 @@
 ### REST service project with Dagger (Dependeny Injection library).
-
 REST - jersey
+
+# Test
+[run_test.sh](./run_test.sh)
+
+````shell
+./mvnw clean test
+````
+
+JaCoCo отчет о тестах в [target/site/jacoco/index.html](target/site/jacoco/index.html). 
 
 [[run_mvn_exec.sh](run_mvn_exec.sh)
 ````shell
