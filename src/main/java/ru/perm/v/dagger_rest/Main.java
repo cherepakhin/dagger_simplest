@@ -8,6 +8,8 @@ import org.glassfish.grizzly.http.server.HttpServer;
 import org.glassfish.jersey.grizzly2.httpserver.GrizzlyHttpServerFactory;
 import org.glassfish.jersey.internal.inject.AbstractBinder;
 import org.glassfish.jersey.server.ResourceConfig;
+import ru.perm.v.dagger_rest.hello.HelloWorld;
+import ru.perm.v.dagger_rest.hello.HelloWorldModule;
 
 import java.net.URI;
 
