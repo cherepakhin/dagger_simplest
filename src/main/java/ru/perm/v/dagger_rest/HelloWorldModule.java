@@ -1,4 +1,4 @@
-package demo;
+package ru.perm.v.dagger_rest;
 
 import dagger.Module;
 import dagger.Provides;

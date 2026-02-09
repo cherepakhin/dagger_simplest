@@ -1,4 +1,6 @@
-### Hello World project for Dagger (Dependeny Injection library).
+### REST service project with Dagger (Dependeny Injection library).
+
+REST - jersey
 
 [[run_mvn_exec.sh](run_mvn_exec.sh)
 ````shell
