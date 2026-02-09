@@ -5,10 +5,15 @@ import java.util.Objects;
 public class VacancyDTO extends ADTO {
     private String name;
 
+    public VacancyDTO() {
+        super();
+    }
+
     public VacancyDTO(Long id, String name) {
         super(id);
         this.name = name;
     }
+
 
     public String getName() {
         return name;
