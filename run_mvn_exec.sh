@@ -1,1 +1,3 @@
-mvn clean compile exec:java
+#!/bin/bash
+
+./mvnw clean compile exec:java

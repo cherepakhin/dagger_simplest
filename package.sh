@@ -1,1 +1,2 @@
-mvn clean package
+#!/bin/bash
+./mvnw clean package

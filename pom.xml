@@ -99,7 +99,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>demo.Main</mainClass>
+                    <mainClass>ru.perm.v.dagger_rest.Main</mainClass>
                 </configuration>
             </plugin>
 
