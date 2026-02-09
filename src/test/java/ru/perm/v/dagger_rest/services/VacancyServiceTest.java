@@ -3,6 +3,8 @@ package ru.perm.v.dagger_rest.services;
 import org.junit.jupiter.api.Test;
 import ru.perm.v.dagger_rest.entity.VacancyEntity;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -11,8 +13,10 @@ class VacancyServiceTest {
     @Test
     void getVacancies() {
         VacancyService vacancyService = new VacancyService();
-
-        assertEquals(2, vacancyService.getVacancies().size());
+        List<VacancyEntity> vacancies = vacancyService.getAll();
+        assertEquals(2, vacancies.size());
+        assertEquals(new VacancyEntity(1L, "Vacancy 1"), vacancies.get(0));
+        assertEquals(new VacancyEntity(2L, "Vacancy 2"), vacancies.get(1));
     }
 
     @Test

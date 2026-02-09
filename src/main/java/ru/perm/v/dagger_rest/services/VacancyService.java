@@ -18,7 +18,7 @@ public class VacancyService {
         allVacancies.add(new VacancyEntity(2L, "Vacancy 2"));
     }
 
-    public List<VacancyEntity> getVacancies() {
+    public List<VacancyEntity> getAll() {
         return allVacancies;
     }
 
