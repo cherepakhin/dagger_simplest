@@ -1,8 +1,7 @@
-package ru.perm.v.demo;
+package ru.perm.v.dagger_rest.hello;
 
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
-import ru.perm.v.dagger_rest.hello.HelloWorldResource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

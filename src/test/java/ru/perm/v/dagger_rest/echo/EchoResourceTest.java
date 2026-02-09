@@ -1,8 +1,7 @@
-package ru.perm.v.demo;
+package ru.perm.v.dagger_rest.echo;
 
 import jakarta.ws.rs.core.Response;
 import org.junit.jupiter.api.Test;
-import ru.perm.v.dagger_rest.echo.EchoResource;
 
 import static org.junit.jupiter.api.Assertions.*;
 
