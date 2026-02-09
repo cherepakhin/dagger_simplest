@@ -12,7 +12,6 @@ import java.util.Optional;
 public class VacancyService {
     private List<VacancyEntity> allVacancies;
 
-    @Inject
     public VacancyService() {
         allVacancies = new ArrayList<VacancyEntity>();
         allVacancies.add(new VacancyEntity(1L, "Vacancy 1"));

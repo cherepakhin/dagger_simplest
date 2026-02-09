@@ -7,24 +7,34 @@ import ru.perm.v.dagger_rest.resources.HelloWorldResource;
 import ru.perm.v.dagger_rest.resources.VacancyResource;
 import ru.perm.v.dagger_rest.services.VacancyService;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class VacancyResourceTest {
 
 
     @Test
-    public void testEchoMessage() {
-        Long ID = 100L;
+    public void getById() {
+        Long ID = 1L;
         VacancyResource resource = new VacancyResource(new VacancyService());
         Response response = resource.getById(ID);
-        assertEquals(new VacancyDTO(ID, "test"+ID), response.getEntity());
+        assertEquals(new VacancyDTO(ID, "Vacancy "+ID), response.getEntity());
     }
 
 
     @Test
-    public void testEchoStatus() {
-        HelloWorldResource resource = new HelloWorldResource();
-        Response response = resource.getMessage("Hello World");
-        assertEquals(200, response.getStatus());
+    public void getByIdErrorMessage() {
+        Long ID = 100L;
+        VacancyResource resource = new VacancyResource(new VacancyService());
+        boolean isException = false;
+        String message = "";
+        try {
+            resource.getById(ID);
+        } catch (Exception e) {
+            isException = true;
+            message = e.getMessage();
+        }
+
+        assertTrue(isException);
+        assertEquals("Vacancy not found", message);
     }
 }
