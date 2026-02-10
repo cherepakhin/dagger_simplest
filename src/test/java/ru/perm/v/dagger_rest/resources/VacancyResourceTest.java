@@ -45,8 +45,8 @@ public class VacancyResourceTest {
     @Test
     public void getAll() {
         VacancyResource resource = new VacancyResource(new VacancyService());
-        Response response = resource.getAll();
 
+        Response response = resource.getAll();
         List<VacancyEntity> vacancyEntities = (List<VacancyEntity>) response.getEntity();
 
         assertEquals(2, vacancyEntities.size());
