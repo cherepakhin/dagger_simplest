@@ -31,6 +31,20 @@ public class VacancyDTOTest {
     }
 
     @Test
+    void setName() {
+        VacancyDTO vacancy = new VacancyDTO(null, null);
+
+        Long id = 2L;
+        String name = "Senior Developer";
+
+        vacancy.setId(id);
+        vacancy.setName(name);
+
+        assertEquals(id, vacancy.getId());
+        assertEquals(name, vacancy.getName());
+    }
+
+    @Test
     void testEquals_SameObject() {
         VacancyDTO vacancy = new VacancyDTO(1L, "Dev");
         assertEquals(vacancy, vacancy);
