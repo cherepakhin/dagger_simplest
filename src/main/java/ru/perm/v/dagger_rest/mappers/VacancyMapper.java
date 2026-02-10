@@ -24,11 +24,11 @@ public class VacancyMapper {
         }
     }
 
-    public List<VacancyDTO> toDTOs(List<VacancyEntity> entities) {
+    public static List<VacancyDTO> toDTOs(List<VacancyEntity> entities) {
         return entities.stream().map(VacancyMapper::toDTO).collect(Collectors.toList());
     }
 
-    public List<VacancyEntity> toEntities(List<VacancyDTO> dtos) {
+    public static List<VacancyEntity> toEntities(List<VacancyDTO> dtos) {
         return dtos.stream().map(VacancyMapper::toEntity).collect(Collectors.toList());
     }
 }

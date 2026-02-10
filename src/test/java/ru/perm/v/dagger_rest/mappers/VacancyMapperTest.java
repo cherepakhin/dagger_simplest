@@ -11,38 +11,34 @@ import static org.junit.jupiter.api.Assertions.*;
 public class VacancyMapperTest {
 
     @Test
-    void toDTO() {
-        VacancyMapper mapper = new VacancyMapper();
+    public void toDTO() {
         VacancyEntity entity = new VacancyEntity();
         entity.setId(1L);
         entity.setName("Vacancy 1");
-        VacancyDTO dto = mapper.toDTO(entity);
+        VacancyDTO dto = VacancyMapper.toDTO(entity);
 
         assertEquals(entity.getId(), dto.getId());
         assertEquals(entity.getName(), dto.getName());
     }
 
     @Test
-    void toEntity() {
-        VacancyMapper mapper = new VacancyMapper();
-
+    public void toEntity() {
         VacancyDTO dto = new VacancyDTO();
         dto.setId(1L);
         dto.setName("Vacancy 1");
 
-        VacancyEntity entity = mapper.toEntity(dto);
+        VacancyEntity entity = VacancyMapper.toEntity(dto);
 
         assertEquals(1L, entity.getId());
         assertEquals("Vacancy 1", entity.getName());
     }
 
     @Test
-    void toDTOs() {
-        VacancyMapper mapper = new VacancyMapper();
+    public void toDTOs() {
         VacancyEntity entity1 = new VacancyEntity(1L, "Vacancy 1");
         VacancyEntity entity2 = new VacancyEntity(2L, "Vacancy 2");
 
-        List<VacancyDTO> dtos = mapper.toDTOs(List.of(entity1, entity2));
+        List<VacancyDTO> dtos = VacancyMapper.toDTOs(List.of(entity1, entity2));
 
         assertEquals(2, dtos.size());
 
@@ -54,12 +50,11 @@ public class VacancyMapperTest {
     }
 
     @Test
-    void toEntities() {
-        VacancyMapper mapper = new VacancyMapper();
+    public void toEntities() {
         VacancyDTO dto1 = new VacancyDTO(1L, "Vacancy 1");
         VacancyDTO dto2 = new VacancyDTO(2L, "Vacancy 2");
 
-        List<VacancyEntity> entityList = mapper.toEntities(List.of(dto1, dto2));
+        List<VacancyEntity> entityList = VacancyMapper.toEntities(List.of(dto1, dto2));
 
         assertEquals(2, entityList.size());
 
@@ -68,5 +63,19 @@ public class VacancyMapperTest {
 
         assertEquals(2L, entityList.get(1).getId());
         assertEquals("Vacancy 2", entityList.get(1).getName());
+    }
+
+    @Test
+    public void toDTOForNullEntity() {
+        VacancyDTO dto = VacancyMapper.toDTO(null);
+
+        assertNull(dto);
+    }
+
+    @Test
+    public void toEntityForNullDTO() {
+        VacancyEntity entity = VacancyMapper.toEntity(null);
+
+        assertNull(entity);
     }
 }
