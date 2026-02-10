@@ -3,7 +3,7 @@ package ru.perm.v.dagger_rest.dto;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class VacancyDTOTest {
+public class VacancyDTOTest {
 
     @Test
     void testConstructorAndGetters() {
