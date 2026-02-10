@@ -12,7 +12,9 @@ public class HelloWorldResource {
     @Path("/{message}")
     public Response getMessage(@PathParam("message") String message) {
         if (message == null || message.isEmpty()) {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+            return Response.status(Response.Status.BAD_REQUEST)
+                    .entity("Message must be not null")
+                    .build();
         }
         return Response.ok(message).build();
     }

@@ -20,4 +20,21 @@ public class HelloWorldResourceTest {
         Response response = resource.getMessage("Hello World");
         assertEquals(200, response.getStatus());
     }
+
+    @Test
+    public void forEmptyMessage() {
+        HelloWorldResource resource = new HelloWorldResource();
+        Response response = resource.getMessage("");
+        assertEquals(400, response.getStatus());
+        assertEquals("Message must be not null", response.getEntity());
+    }
+
+    @Test
+    public void forNullMessage() {
+        HelloWorldResource resource = new HelloWorldResource();
+        Response response = resource.getMessage(null);
+        assertEquals(400, response.getStatus());
+        assertEquals("Message must be not null", response.getEntity());
+    }
+
 }
