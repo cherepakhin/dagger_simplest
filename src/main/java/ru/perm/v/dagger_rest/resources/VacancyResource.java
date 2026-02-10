@@ -3,7 +3,6 @@ package ru.perm.v.dagger_rest.resources;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import ru.perm.v.dagger_rest.dto.VacancyDTO;
 import ru.perm.v.dagger_rest.entity.VacancyEntity;
 import ru.perm.v.dagger_rest.mappers.VacancyMapper;
 import ru.perm.v.dagger_rest.services.VacancyService;
