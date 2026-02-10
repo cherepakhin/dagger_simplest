@@ -8,7 +8,9 @@ REST - jersey
 ./mvnw clean test
 ````
 
-JaCoCo отчет о тестах в [target/site/jacoco/index.html](target/site/jacoco/index.html). 
+JaCoCo отчет о __покрытии__ тестами в [target/site/jacoco/index.html](target/site/jacoco/index.html). 
+
+### Запуск программы
 
 [[run_mvn_exec.sh](run_mvn_exec.sh)
 ````shell
